@@ -7,8 +7,8 @@ use App\Models\Post;
 
 class Postcontroller extends Controller
 {
-    public function index(Post $post)
+    public function show(Post $post)
     {
-        return $post->get();
+        return view('posts/show')->with(['post'=>$post]);
     }
 }
